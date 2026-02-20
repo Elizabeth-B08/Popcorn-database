@@ -1,5 +1,6 @@
 import database
 
+# testing GitHub
 
 MENU_PROMPT = """ --- Coffee Bean App ---
  
