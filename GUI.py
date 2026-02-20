@@ -8,19 +8,21 @@ from tkinter import messagebox
 
 DB_NAME = "store.db"
 
-def connect():
-    return sqlite3.connect(DB_NAME)
-
-def create_table():
-    with connect() as conn:
-        conn.execute("""
+CREATE_PRODUCT_TABLE = """
             CREATE TABLE IF NOT EXISTS products (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
                 price REAL NOT NULL,
                 quantity INTEGER NOT NULL
             )
-        """)
+        """
+
+def connect():
+    return sqlite3.connect(DB_NAME)
+
+def create_table():
+    with connect() as conn:
+        conn.execute(CREATE_PRODUCT_TABLE)
 
 def add_product(name, price, quantity):
     with connect() as conn:
