@@ -46,7 +46,7 @@ def add_supplier_column_if_missing():
         try:
             conn.execute("ALTER TABLE products ADD COLUMN supplier_id INTEGER")
         except sqlite3.OperationalError:
-            pass  # Column already exists
+            pass
 
 def add_timestamp_column_if_missing():
     with connect() as conn:
