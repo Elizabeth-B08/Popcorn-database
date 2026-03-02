@@ -6,9 +6,9 @@ from datetime import datetime
 
 DB_NAME = "store.db"
 
-# -----------------------------
+
 # DATABASE SETUP
-# -----------------------------
+
 
 CREATE_PRODUCT_TABLE = """
 CREATE TABLE IF NOT EXISTS products (
