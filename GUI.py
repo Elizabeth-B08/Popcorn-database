@@ -88,9 +88,9 @@ def delete_product(product_id):
         conn.execute("DELETE FROM products WHERE id=?", (product_id,))
 
 
-# -----------------------------
+
 # SUPPLIER FUNCTIONS
-# -----------------------------
+
 
 def populate_suppliers():
     suppliers = [
@@ -112,9 +112,9 @@ def get_supplier_info(supplier_id):
         ).fetchone()
 
 
-# -----------------------------
+
 # CSV FEATURES
-# -----------------------------
+
 
 def import_from_csv():
     file_path = filedialog.askopenfilename(filetypes=[("CSV Files", "*.csv")])
@@ -147,9 +147,9 @@ def backup_to_csv():
     messagebox.showinfo("Backup Complete", f"Database backed up as {filename}")
 
 
-# -----------------------------
+
 # GUI FUNCTIONS
-# -----------------------------
+
 
 def refresh_list():
     listbox.delete(0, tk.END)
@@ -220,9 +220,9 @@ def change_font_color():
     if color:
         listbox.config(fg=color)
 
-# -----------------------------
+
 # GUI SETUP
-# -----------------------------
+
 
 create_tables()
 add_supplier_column_if_missing()
